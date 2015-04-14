@@ -1,5 +1,7 @@
 # openig-vagrant
-Provide a basic installation for local testing and development for vagrant using the virtualbox provider.
+Provide a basic installation for local testing and development for OpenIG using the virtualbox provider.
+
+You will need [Vagrant!](https://www.vagrantup.com/) to run the example.
 
     git clone https://github.com/zalando/openig-vagrant.git
     vagrant up
