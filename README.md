@@ -1,7 +1,7 @@
 # openig-vagrant
 Provide a basic installation for local testing and development for OpenIG using the virtualbox provider.
 
-You will need [Vagrant!](https://www.vagrantup.com/) to run the example.
+You will need [Vagrant!](https://www.vagrantup.com/) to run the example. When install is finished OpenIG will be running with IP 192.168.33.14
 
     git clone https://github.com/zalando/openig-vagrant.git
     vagrant up
