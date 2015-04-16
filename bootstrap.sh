@@ -27,10 +27,15 @@ echo "export JAVA_HOME" >> /home/vagrant/.bashrc
 echo "export JRE_HOME" >> /home/vagrant/.bashrc
 echo "export PATH" >> /home/vagrant/.bashrc
 
-# Download and Configure OpenIG
+# [+] Download and Configure OpenIG
 wget -O /tmp/OpenIG-3.1.0.war https://www.dropbox.com/s/3hpi3mxf69asxxg/OpenIG-3.1.0.war
 rm -Rf /var/lib/tomcat7/webapps/ROOT
 mv /tmp/OpenIG-3.1.0.war /var/lib/tomcat7/webapps/ROOT.war
+
+# [+] Create OpenIG configuration
+mkdir -p /usr/share/tomcat7/.openig/config/routes 
+mv /home/vagrant/config.json /usr/share/tomcat7/.openig/config/config.json
+mv /home/vagrant/99-default.json /usr/share/tomcat7/.openig/config/routes/99-default.json
 
 # [+] Start OpenIG
 service tomcat7 start

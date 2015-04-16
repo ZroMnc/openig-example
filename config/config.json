@@ -1,0 +1,33 @@
+{
+    "handler": {
+        "type": "Router",
+        "audit": "global",
+        "capture": "all"
+    },
+    "heap": [
+        {   
+            "name": "LogSink",
+            "type": "ConsoleLogSink",
+            "config": {
+                "level": "DEBUG"
+            }
+        },
+        {   
+            "name": "JwtSession",
+            "type": "JwtSession"
+        },
+        {   
+            "name": "ClientHandler",
+            "type": "ClientHandler"
+        },
+        {   
+            "name": "capture",
+            "type": "CaptureDecorator",
+            "config": {
+                "captureEntity": true,
+                "_captureExchange": true
+            }
+        }
+    ],
+    "baseURI": "http://z-devsn03.zalando:33605"
+}
