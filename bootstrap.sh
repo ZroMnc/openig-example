@@ -37,6 +37,13 @@ mkdir -p /usr/share/tomcat7/.openig/config/routes
 mv /home/vagrant/config.json /usr/share/tomcat7/.openig/config/config.json
 mv /home/vagrant/99-default.json /usr/share/tomcat7/.openig/config/routes/99-default.json
 
+# [+] Create self signed certificate for https
+mkdir -p /usr/share/ssl
+keytool -genkey -alias tomcat -dname "CN=CA, OU=IAM, O=Zalando SE, L=Berlin, S=Berlin, C=DE" -keyalg RSA -keystore /usr/share/ssl/sslstore -keypass changeme -storepass changeme
+
+# [+] Modify Tomcat configuration accordingly
+mv -f /home/vagrant/server.xml /etc/tomcat7/server.xml
+
 # [+] Start OpenIG
 service tomcat7 start
 # [+] Done
