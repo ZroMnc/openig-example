@@ -1,5 +1,5 @@
 # openig-vagrant
-Provide a basic installation for local testing and development for OpenIG using the virtualbox provider.
+Provide a basic installation for local testing and development of OpenIG using the virtualbox provider.
 
 You will need [Vagrant](https://www.vagrantup.com/) to run the example. When install is finished OpenIG will be running with IP 192.168.33.14
 
@@ -15,7 +15,7 @@ Little patience is required. Wait till you see:
 For convenience, set a FQDN in your `/etc/hosts`, like `openig.example.com`
 
 ## Did it work?
-Check: http://openig.example.com:8080
+Check: https://192.168.33.14:8443
 
 ## Documentation
 * http://docs.forgerock.org/en/openig/3.1.0

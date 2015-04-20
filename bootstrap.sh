@@ -17,15 +17,15 @@ echo oracle-java7-installer shared/accepted-oracle-license-v1-1 select true | su
 apt-get install -y oracle-java7-installer
 update-java-alternatives -s java-7-oracle
 
-# [+] Container for OpenIG
-apt-get install -y tomcat7
-service tomcat7 stop
-
 # [+] Java Environment Variables
 echo "PATH=$PATH:$HOME/bin:$JAVA_HOME/bin" >> /home/vagrant/.bashrc
 echo "export JAVA_HOME" >> /home/vagrant/.bashrc
 echo "export JRE_HOME" >> /home/vagrant/.bashrc
 echo "export PATH" >> /home/vagrant/.bashrc
+
+# [+] Install Tomcat 7 - container for OpenIG
+apt-get install -y tomcat7
+service tomcat7 stop
 
 # [+] Download and Configure OpenIG
 wget -O /tmp/OpenIG-3.1.0.war https://www.dropbox.com/s/3hpi3mxf69asxxg/OpenIG-3.1.0.war
