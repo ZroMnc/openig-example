@@ -11,9 +11,6 @@ Little patience is required. Wait till you see:
     ==> default:  * Starting Tomcat servlet engine tomcat7
     ==> default:    ...done.
 
-## Note
-For convenience, set a FQDN in your `/etc/hosts`, like `openig.example.com`
-
 ## Did it work?
 Check: https://192.168.33.14:8443
 
