@@ -5,10 +5,11 @@
         "capture": "all"
     },
     "heap": [
-        {   
+        {  
             "name": "LogSink",
-            "type": "ConsoleLogSink",
+            "type": "FileLogSink",
             "config": {
+                "file": "${system['log'] ? system['log'] : '/tmp/proxy.log'}",
                 "level": "DEBUG"
             }
         },
@@ -29,5 +30,5 @@
             }
         }
     ],
-    "baseURI": "https://corporate.zalando.com"
+    "baseURI": "http://ig.example.com:8081"
 }
