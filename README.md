@@ -19,9 +19,14 @@ vi /etc/hosts
 Also 
 
 #### Endpoints
+
 *OpenIG*
-http://ig.example.com:8080
-http://ig.example.com:8080/static
+* http://ig.example.com:8080
+* http://ig.example.com:8080/static
 
 *Protected App*
-http://ig.example.com:8081
+* http://ig.example.com:8081
+
+#### MYSQL Extention
+
+This helped a lot for testing - [Sample Data](http://www.mysqltutorial.org/mysql-sample-database.aspx)
